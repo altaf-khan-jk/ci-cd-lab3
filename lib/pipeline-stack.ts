@@ -20,11 +20,11 @@ export class PipelineStack extends cdk.Stack {
       actions: [
         new actions.CodeStarConnectionsSourceAction({
           actionName: 'GitHub',
-          owner: '<YOUR_GITHUB_USERNAME>',
-          repo: '<YOUR_REPO_NAME>',
+          owner: 'altaf-khan-jk',
+          repo: 'ci-cd-lab3',
           branch: 'main',
           output: sourceOutput,
-          connectionArn: '<YOUR_CONNECTION_ARN>'
+          connectionArn: 'arn:aws:codeconnections:us-east-1:029448392222:connection/25eed57b-94d8-4d01-9d18-6aa1848254d5'
         })
       ]
     });
