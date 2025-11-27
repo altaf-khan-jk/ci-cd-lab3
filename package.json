@@ -1,0 +1,31 @@
+{
+  "name": "cdk-pipeline-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p tsconfig.json",
+    "synth": "cdk synth",
+    "deploy:app": "cdk deploy AppStack --require-approval never",
+    "deploy:pipeline": "cdk deploy PipelineStack --require-approval never"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@aws-cdk/core": "^1.19.0",
+    "aws-cdk-lib": "^2.230.0",
+    "constructs": "^10.4.3"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.159",
+    "@types/node": "^24.10.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - npm install -g aws-cdk
+      - npm ci
+  build:
+    commands:
+      - npm run build
+      - cdk synth --no-staging > template.yml
+
+artifacts:
+  files:
+    - template.yml
+    - '**/*'
+  discard-paths: no
